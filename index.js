@@ -16,7 +16,7 @@ var rtc = {
 
 var client = AgoraRTC.createClient({mode: option.mode, codec: option.codec})
 
-function join(rtc, option) {
+async function join(rtc, option) {
     rtc.client = client
     rtc.params = option
 
@@ -40,7 +40,7 @@ function join(rtc, option) {
             rtc.localStream.play("local-player")
             
             // publish local stream
-            publish(rtc)
+            await publish(rtc)
         })
     }
 )}
