@@ -40,7 +40,7 @@ async function join(rtc, option) {
             rtc.localStream.play("local-player")
             
             // publish local stream
-            await publish(rtc)
+            publish(rtc)
         })
     }
 )}
