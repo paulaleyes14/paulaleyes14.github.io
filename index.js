@@ -45,7 +45,7 @@ async function join(rtc, option) {
     }
 )}
 
-function publish (rtc) {
+async function publish (rtc) {
     rtc.client.publish(rtc.localStream, function (err) {
         console.log("publish failed")
         console.error(err)
